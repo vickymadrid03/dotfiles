@@ -18,7 +18,8 @@ local plugins = {
     'nvis-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 'nvim-tree/nvim-web-devicons' },
   -- LSP
   { 'williamboman/mason.nvim'},
   { 'williamboman/mason-lspconfig.nvim' },
