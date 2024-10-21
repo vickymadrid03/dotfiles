@@ -15,4 +15,18 @@ vim.opt.listchars = {
     space = "⋅"
 }
 
+-- Pane management
+-- Move to the left pane
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })
+-- Move to the right pane
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true })
+-- Move to the top pane
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true })
+-- Move to the bottom pane
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
+
+-- Indent with single < > key press
+vim.keymap.set("n", ">", ">>")
+vim.keymap.set("n", "<", "<<")
+
 require('settings.relative_numbers')
