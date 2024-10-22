@@ -25,7 +25,8 @@ local plugins = {
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
   --
-  { 'lewis6991/gitsigns.nvim' }
+  { 'lewis6991/gitsigns.nvim' },
+  { 'vim-test/vim-test' }
 }
 
 require('lazy').setup(plugins, opts)
@@ -35,3 +36,4 @@ require('plugins.treesitter')
 require('plugins.mason')
 require('plugins.gitsigns')
 require('plugins.colortheme')
+require('plugins.test')
