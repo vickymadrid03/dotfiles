@@ -24,9 +24,13 @@ local plugins = {
   { 'williamboman/mason.nvim'},
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
-  --
+  -- Git
   { 'lewis6991/gitsigns.nvim' },
-  { 'vim-test/vim-test' }
+  -- Tests
+  { 'vim-test/vim-test' },
+  -- Commands
+  { 'tpope/vim-surround' },
+  { 'github/copilot.vim' }
 }
 
 require('lazy').setup(plugins, opts)
