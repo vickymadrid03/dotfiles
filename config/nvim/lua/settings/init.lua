@@ -1,4 +1,4 @@
-vim.g.mapleader=' '
+vim.g.mapleader = ' '
 vim.cmd('set expandtab')
 vim.cmd('set tabstop=2')
 vim.cmd('set softtabstop=2')
@@ -10,9 +10,9 @@ vim.opt.clipboard:append("unnamedplus") -- Yank to clipboard
 vim.opt.list = true
 -- Configure listchars: tab, end-of-line, and trailing spaces
 vim.opt.listchars = {
-    tab = "› ",
-    trail = "⋅",
-    space = "⋅"
+  tab = "› ",
+  trail = "⋅",
+  space = "⋅"
 }
 
 -- Pane management
@@ -28,5 +28,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
 -- Indent with single < > key press
 vim.keymap.set("n", ">", ">>")
 vim.keymap.set("n", "<", "<<")
+
+-- Run LSP formatter
+vim.api.nvim_set_keymap('n', '<leader>fr', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 
 require('settings.relative_numbers')
