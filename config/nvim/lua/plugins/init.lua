@@ -16,15 +16,29 @@ local plugins = {
   { 'nvimdev/oceanic-material', lazy = false, priority = 1000 },
   { "EdenEast/nightfox.nvim",   lazy = false, priority = 1000 },
   {
-    'nvis-telescope/telescope.nvim', tag = '0.1.8',
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   { 'nvim-tree/nvim-web-devicons' },
   -- LSP
-  { 'williamboman/mason.nvim'},
+  { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
+  -- Autocomplete
+  {
+    'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/nvim-cmp',
+      'hrsh7th/cmp-vsnip',
+      'hrsh7th/vim-vsnip'
+    }
+  },
+  { 'onsails/lspkind.nvim' },
   -- Git
   { 'lewis6991/gitsigns.nvim' },
   -- Tests
