@@ -5,6 +5,7 @@ vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'Telescope live gre
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>ffc', function() builtin.find_files({ cwd = utils.buffer_dir() }) end, { desc = 'Telescope find files in cwd' })
+vim.keymap.set('n', '<leader>sc', builtin.colorscheme, { desc = 'Telescope list colorschemes' })
 
 local actions = require('telescope.actions')
 require('telescope').setup {
@@ -18,4 +19,9 @@ require('telescope').setup {
       },
     },
   },
+  pickers = {
+    colorscheme = {
+      enable_preview = true
+    }
+  }
 }
