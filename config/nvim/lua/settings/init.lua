@@ -6,6 +6,10 @@ vim.cmd('set shiftwidth=2')
 vim.cmd('set colorcolumn=80,120')
 vim.opt.clipboard:append("unnamedplus") -- Yank to clipboard
 
+-- Case-insensitive search unless using uppercase
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Enable list mode
 vim.opt.list = true
 -- Configure listchars: tab, end-of-line, and trailing spaces
