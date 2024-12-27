@@ -1,0 +1,18 @@
+# Visual
+#
+theme = cobalt2
+
+# Keybindings
+#
+# Split navigation
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+
+# Helpers
+#
+keybind = cmd+g=toggle_quick_terminal
+
+# Settings
+#
+auto-update = download
+window-save-state = always
