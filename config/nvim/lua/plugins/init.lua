@@ -13,8 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
 local plugins = {
+  -- Themes
   { 'nvimdev/oceanic-material', lazy = false, priority = 1000 },
-  { "EdenEast/nightfox.nvim",   lazy = false, priority = 1000 },
+  { 'EdenEast/nightfox.nvim',   lazy = false, priority = 1000 },
+  { 'mhartington/oceanic-next', lazy = false, priority = 1000 },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' }
