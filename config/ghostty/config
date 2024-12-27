@@ -14,5 +14,4 @@ keybind = cmd+g=toggle_quick_terminal
 
 # Settings
 #
-auto-update = download
 window-save-state = always
