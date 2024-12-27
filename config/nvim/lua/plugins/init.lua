@@ -23,6 +23,16 @@ local plugins = {
   },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   { 'nvim-tree/nvim-web-devicons' },
+  -- Filetree
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window
+    }
+  },
   -- LSP
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
@@ -52,9 +62,10 @@ local plugins = {
 
 require('lazy').setup(plugins, opts)
 
-require('plugins.telescope')
-require('plugins.treesitter')
-require('plugins.mason')
-require('plugins.gitsigns')
 require('plugins.colortheme')
+require('plugins.gitsigns')
+require('plugins.mason')
+require('plugins.neotree')
+require('plugins.telescope')
 require('plugins.test')
+require('plugins.treesitter')
