@@ -10,7 +10,8 @@ keybind = alt+l=goto_split:right
 
 # Helpers
 #
-keybind = cmd+g=toggle_quick_terminal
+keybind = super+g=toggle_quick_terminal
+keybind = super+f=write_screen_file:open
 
 # Settings
 #
