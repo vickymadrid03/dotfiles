@@ -18,7 +18,8 @@ local plugins = {
   { 'EdenEast/nightfox.nvim',   lazy = false, priority = 1000 },
   { 'mhartington/oceanic-next', lazy = false, priority = 1000 },
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -57,7 +58,37 @@ local plugins = {
   { 'vim-test/vim-test' },
   -- Commands
   { 'tpope/vim-surround' },
-  { 'github/copilot.vim' }
+  -- { 'github/copilot.vim' },
+  {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    lazy = false,
+    version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+    build = "make",
+    dependencies = {
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      --- The below dependencies are optional,
+      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+      "hrsh7th/nvim-cmp",              -- autocompletion for avante commands and mentions
+      "nvim-tree/nvim-web-devicons",   -- or echasnovski/mini.icons
+      -- "zbirenbaum/copilot.lua",        -- for providers='copilot'
+      {
+        -- support for image pasting
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+      },
+      {
+        -- Make sure to set this up properly if you have lazy=true
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      },
+    },
+  }
 }
 
 require('lazy').setup(plugins, opts)
@@ -69,3 +100,4 @@ require('plugins.neotree')
 require('plugins.telescope')
 require('plugins.test')
 require('plugins.treesitter')
+require('plugins.avante')
