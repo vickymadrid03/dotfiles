@@ -10,6 +10,13 @@ config.setup({
     temperature = 0,
     max_tokens = 4096,
   },
+  behavior = {
+    auto_suggestions = false
+  },
+  sugestion = {
+    debounce = 1000,
+    throttle = 1000,
+  }
 })
 
 require("img-clip").setup({

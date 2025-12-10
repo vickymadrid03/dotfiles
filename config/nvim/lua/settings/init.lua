@@ -36,4 +36,7 @@ vim.keymap.set("n", "<", "<<")
 -- Run LSP formatter
 vim.api.nvim_set_keymap('n', '<leader>fr', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 
+-- Show messages
+-- vim.diagnostic.config({virtual_text=false, virtual_lines=true, underline=true})
+
 require('settings.relative_numbers')

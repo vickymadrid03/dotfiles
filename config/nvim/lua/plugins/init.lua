@@ -58,7 +58,7 @@ local plugins = {
   { 'vim-test/vim-test' },
   -- Commands
   { 'tpope/vim-surround' },
-  -- { 'github/copilot.vim' },
+  { 'github/copilot.vim' },
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
